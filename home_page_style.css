@@ -1,0 +1,13 @@
+/* this is the body */
+body{
+	background-color : #d6d7db !important ;
+	font-family: 'Playfair Display', serif;
+}
+/* this is the paragraph */
+p{
+	background-color : #d5c0a2 ;
+}
+/* this is the navabar */
+header{
+	background-color : #d5c0a2 ;
+}

@@ -1,0 +1,26 @@
+body{
+     /* this is my background colours html */
+    background-color : #d6d7db !important ;
+    font-family: 'Playfair Display', serif;
+	margin: 0x;
+}
+
+ 
+
+header{
+    background-color: #d5c0a2;
+	margin: 0;
+	padding: 0px;
+}
+ 
+
+ h1,h2{
+	 text-align: center;
+ }
+ p {
+	 text-align: center;
+	 margin-left: 120px;
+	 margin-right: 120px;
+	 font-size: 24px;
+ }
+ 

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en"> 
+	<head>
+		<title>Game_Page</title>
+		<!-- this is the link to the bootstrap and google fonts -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Amaranth&display=swap" rel="stylesheet"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		 <link rel="stylesheet" href="game_style.css"> <!--this is the link to my css file  -->
+		
+		
+	</head>
+	<body>
+		<!-- This is the code for the nav bar -->
+		
+		<header>
+                    <nav class="navbar navbar-expand-lg navbar-light #d5c0a2">
+                  <a class="navbar-brand" href="home_page.html">AbitOfShoes</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+		
+				<!-- We used list items to store the names of the different links -->
+
+                  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="home_page.html">Homepage <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="collection_page.html">Collection/Gallery</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="about_us_page.html">About us</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="contact_us_page.html">Contact us</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="game_page.html">Game</a>
+                      </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                      <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                  </div>
+                </nav>
+		</header>  
+		</div>		
+		
+		<!-- This is how the calculation of the score works. E.G. "1/5" means one correct question out of five answered -->
+		<h1 id="score">0</h1> 		
+		<!-- These are the questions present on the webpage -->
+		<!-- I used buttons to store the answers  -->
+		<p class ="question">Q1. What three letters can frighten a theif away?</p>
+				<button onclick = "wrong()">TGIF</button>
+				<button onclick = "correct()">ICU</button>
+		<p class ="question">Q2. What has cities but no houses; forests but no trees and water but no fish?</p>
+				<button onclick = "wrong()">Picture</button>
+				<button onclick = "correct()">Map</button>
+		<p class ="question">Q3. No matter how much you use me you change me every month. What am I?</p>
+				<button onclick = "wrong()">Toothbrush</button>
+				<button onclick = "correct()">Calander</button>
+		<p class ="question">Q4. What is harder to catch the faster you run?</p>
+				<button onclick = "wrong()">A ball</button>
+				<button onclick = "correct()">Your breath</button>
+		<p class ="question">Q5. What has a face and two hands?</p>
+				<button onclick = "wrong()">A person</button>
+				<button onclick = "correct()">A clock</button>
+		<p class ="question">Q6.If two snakes marry, what will their towels read?</p>
+				<button onclick = "wrong()">Hapiesst couple</button>
+				<button onclick = "correct()">Hiss and hers</button>
+		<p class ="question">Q7. I can't be bought, but i can be stolen with just one look. No use to one person but valuable to two. What am I?</p>
+				<button onclick = "wrong()">Wedding ring</button>
+				<button onclick = "correct()">Love</button>
+		<p class ="question">Q8. What flowers are kissable?</p>
+				<button onclick = "wrong()">Roses</button>
+				<button onclick = "correct()">Tulips</button>
+		<!-- simple js code to store the scores of the code and to give an alert when question is answered right or wrong -->
+		<script> 
+		<!-- these are the variables used to calculate the scores starting with 0 questions and 0 correct answers -->
+		let right = 0;
+		let questions = 0;
+		
+		<!-- inside each function is a peice of code that basically tells the function to increse or stay the same based on the answers chosen -->
+			function wrong() {
+				alert("You are wrong");
+			    questions = questions + 1; <!--there is no "right" in this code because there is no need, the score will not chnage if wrong alert box pops up -->
+				document.getElementById("score").innerHTML = right + "/" + questions <!-- basically means 0 (right answers) /(out of) 0 (questions answered) -->
+				}
+			function correct() {
+				right = right + 1; <!-- there is "right" in this code as there will need to be an increase if right box comes up -->
+				questions = questions + 1;
+				alert("You are correct");
+				document.getElementById("score").innerHTML = right + "/" + questions
+				} 
+				
+				
+			
+		</script>
+	</body>	
+
+</html>

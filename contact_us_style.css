@@ -1,0 +1,40 @@
+/*this style  my index html page */
+
+body{
+	 /* this is my background colours html */
+    background-color : #d6d7db !important ;
+    font-family: 'Playfair Display', serif;
+	
+	
+}
+ /*this style my header */
+header{
+    background-color: #d5c0a2;
+   
+    
+}
+
+ /* this style my index h1*/
+h1 {
+	
+	margin-left: 300px; 
+    font-size: 30px ;
+	
+}
+
+h2{
+	margin-left: 180px;
+	font-size: 20px ;
+}
+
+h3{
+	margin-left: 180px;
+	font-size : 20px
+}
+
+h4{
+	margin-left: 250px;
+}
+form{
+	margin-left: 30px;
+}

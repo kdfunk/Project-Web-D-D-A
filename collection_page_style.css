@@ -1,0 +1,34 @@
+  
+  /*this style  my index htmlpage */
+    
+body{
+	background-color : #d6d7db !important ;
+	font-family: 'Playfair Display', serif;
+}
+/* this is the paragraph */
+p{
+	background-color : #d5c0a2 ;
+		margin-left: 10px;
+}
+/* this is the navabar */
+header{
+	background-color : #d5c0a2 ;
+}
+	
+
+  
+ 
+ 
+ /* targettting the img html */
+img{
+	height:200px;
+    width:200px;
+	margin-left: 10px;
+	 
+ }
+ /*this style my form for index htmlpage */
+form{
+   top: 200px;	
+   
+}
+ 
